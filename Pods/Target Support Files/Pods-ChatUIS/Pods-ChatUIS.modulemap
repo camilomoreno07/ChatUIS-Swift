@@ -1,0 +1,6 @@
+framework module Pods_ChatUIS {
+  umbrella header "Pods-ChatUIS-umbrella.h"
+
+  export *
+  module * { export * }
+}

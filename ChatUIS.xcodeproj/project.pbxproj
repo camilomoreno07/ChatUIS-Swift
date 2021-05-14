@@ -3,23 +3,77 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4B1C615426444B8A00F8FF55 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B1C615326444B8A00F8FF55 /* ChatView.swift */; };
 		4B3B466C2623664700F0E301 /* ChatUISApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B466B2623664700F0E301 /* ChatUISApp.swift */; };
 		4B3B466E2623664700F0E301 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3B466D2623664700F0E301 /* ContentView.swift */; };
 		4B3B46702623664B00F0E301 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B466F2623664B00F0E301 /* Assets.xcassets */; };
 		4B3B46732623664B00F0E301 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3B46722623664B00F0E301 /* Preview Assets.xcassets */; };
+		4B48BAA6262FC2E900E01326 /* ChatRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B48BAA5262FC2E900E01326 /* ChatRow.swift */; };
+		4B7CC13D26434F1C0074061F /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CC13C26434F1C0074061F /* FirstView.swift */; };
+		4B7CC140264350D00074061F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B7CC13F264350D00074061F /* LoginView.swift */; };
+		4B95669A2628C0B400D3A551 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4B9566992628C0B400D3A551 /* GoogleService-Info.plist */; };
+		4BA2850F262FAF34007F6B5F /* MsgModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA2850E262FAF34007F6B5F /* MsgModel.swift */; };
+		4BA28513262FB5C8007F6B5F /* MsgViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BA28512262FB5C8007F6B5F /* MsgViewModel.swift */; };
+		4BE644BA26237B7800E6A95D /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644A826237B7600E6A95D /* Poppins-Light.ttf */; };
+		4BE644BB26237B7800E6A95D /* Poppins-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644A926237B7600E6A95D /* Poppins-Italic.ttf */; };
+		4BE644BC26237B7800E6A95D /* Poppins-SemiBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644AA26237B7600E6A95D /* Poppins-SemiBoldItalic.ttf */; };
+		4BE644BD26237B7800E6A95D /* Poppins-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644AB26237B7600E6A95D /* Poppins-ExtraBold.ttf */; };
+		4BE644BE26237B7800E6A95D /* Poppins-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644AC26237B7600E6A95D /* Poppins-Thin.ttf */; };
+		4BE644BF26237B7800E6A95D /* Poppins-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644AD26237B7600E6A95D /* Poppins-BoldItalic.ttf */; };
+		4BE644C026237B7800E6A95D /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644AE26237B7700E6A95D /* Poppins-Medium.ttf */; };
+		4BE644C126237B7800E6A95D /* Poppins-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644AF26237B7700E6A95D /* Poppins-ExtraBoldItalic.ttf */; };
+		4BE644C226237B7800E6A95D /* Poppins-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B026237B7700E6A95D /* Poppins-Black.ttf */; };
+		4BE644C326237B7800E6A95D /* Poppins-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B126237B7700E6A95D /* Poppins-BlackItalic.ttf */; };
+		4BE644C426237B7800E6A95D /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B226237B7700E6A95D /* Poppins-ExtraLight.ttf */; };
+		4BE644C526237B7800E6A95D /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B326237B7700E6A95D /* Poppins-Bold.ttf */; };
+		4BE644C626237B7800E6A95D /* Poppins-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B426237B7800E6A95D /* Poppins-SemiBold.ttf */; };
+		4BE644C726237B7800E6A95D /* Poppins-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B526237B7800E6A95D /* Poppins-MediumItalic.ttf */; };
+		4BE644C826237B7800E6A95D /* Poppins-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B626237B7800E6A95D /* Poppins-LightItalic.ttf */; };
+		4BE644C926237B7800E6A95D /* Poppins-ExtraLightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B726237B7800E6A95D /* Poppins-ExtraLightItalic.ttf */; };
+		4BE644CA26237B7800E6A95D /* Poppins-ThinItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B826237B7800E6A95D /* Poppins-ThinItalic.ttf */; };
+		4BE644CB26237B7800E6A95D /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4BE644B926237B7800E6A95D /* Poppins-Regular.ttf */; };
+		BAC957BEA5F936709BAA5EC3 /* Pods_ChatUIS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57BEE76C7A73A46EAF305535 /* Pods_ChatUIS.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4B1C615326444B8A00F8FF55 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		4B3B46682623664700F0E301 /* ChatUIS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatUIS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3B466B2623664700F0E301 /* ChatUISApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatUISApp.swift; sourceTree = "<group>"; };
 		4B3B466D2623664700F0E301 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4B3B466F2623664B00F0E301 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3B46722623664B00F0E301 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4B3B46742623664B00F0E301 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4B48BAA5262FC2E900E01326 /* ChatRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRow.swift; sourceTree = "<group>"; };
+		4B7CC13C26434F1C0074061F /* FirstView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
+		4B7CC13F264350D00074061F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4B9566992628C0B400D3A551 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4BA2850E262FAF34007F6B5F /* MsgModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgModel.swift; sourceTree = "<group>"; };
+		4BA28512262FB5C8007F6B5F /* MsgViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MsgViewModel.swift; sourceTree = "<group>"; };
+		4BE644A826237B7600E6A95D /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Light.ttf"; sourceTree = "<group>"; };
+		4BE644A926237B7600E6A95D /* Poppins-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Italic.ttf"; sourceTree = "<group>"; };
+		4BE644AA26237B7600E6A95D /* Poppins-SemiBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBoldItalic.ttf"; sourceTree = "<group>"; };
+		4BE644AB26237B7600E6A95D /* Poppins-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBold.ttf"; sourceTree = "<group>"; };
+		4BE644AC26237B7600E6A95D /* Poppins-Thin.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Thin.ttf"; sourceTree = "<group>"; };
+		4BE644AD26237B7600E6A95D /* Poppins-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BoldItalic.ttf"; sourceTree = "<group>"; };
+		4BE644AE26237B7700E6A95D /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		4BE644AF26237B7700E6A95D /* Poppins-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		4BE644B026237B7700E6A95D /* Poppins-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Black.ttf"; sourceTree = "<group>"; };
+		4BE644B126237B7700E6A95D /* Poppins-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-BlackItalic.ttf"; sourceTree = "<group>"; };
+		4BE644B226237B7700E6A95D /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
+		4BE644B326237B7700E6A95D /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		4BE644B426237B7800E6A95D /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		4BE644B526237B7800E6A95D /* Poppins-MediumItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-MediumItalic.ttf"; sourceTree = "<group>"; };
+		4BE644B626237B7800E6A95D /* Poppins-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-LightItalic.ttf"; sourceTree = "<group>"; };
+		4BE644B726237B7800E6A95D /* Poppins-ExtraLightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ExtraLightItalic.ttf"; sourceTree = "<group>"; };
+		4BE644B826237B7800E6A95D /* Poppins-ThinItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-ThinItalic.ttf"; sourceTree = "<group>"; };
+		4BE644B926237B7800E6A95D /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
+		57BEE76C7A73A46EAF305535 /* Pods_ChatUIS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ChatUIS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1D224B2CFABF24B1B826554 /* Pods-ChatUIS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatUIS.release.xcconfig"; path = "Target Support Files/Pods-ChatUIS/Pods-ChatUIS.release.xcconfig"; sourceTree = "<group>"; };
+		F567EB8FFFBD2F254F9AC373 /* Pods-ChatUIS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ChatUIS.debug.xcconfig"; path = "Target Support Files/Pods-ChatUIS/Pods-ChatUIS.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC957BEA5F936709BAA5EC3 /* Pods_ChatUIS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +93,8 @@
 			children = (
 				4B3B466A2623664700F0E301 /* ChatUIS */,
 				4B3B46692623664700F0E301 /* Products */,
+				DD72C2E317220ED0A1E03F31 /* Pods */,
+				A2E5A796B689C749B865F689 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,11 +109,19 @@
 		4B3B466A2623664700F0E301 /* ChatUIS */ = {
 			isa = PBXGroup;
 			children = (
+				4BA28511262FB57B007F6B5F /* ViewModels */,
+				4B96350526260EC80082A847 /* Model */,
+				4BE644A726237B4F00E6A95D /* fonts */,
 				4B3B466B2623664700F0E301 /* ChatUISApp.swift */,
 				4B3B466D2623664700F0E301 /* ContentView.swift */,
 				4B3B466F2623664B00F0E301 /* Assets.xcassets */,
 				4B3B46742623664B00F0E301 /* Info.plist */,
+				4B9566992628C0B400D3A551 /* GoogleService-Info.plist */,
 				4B3B46712623664B00F0E301 /* Preview Content */,
+				4B48BAA5262FC2E900E01326 /* ChatRow.swift */,
+				4B7CC13C26434F1C0074061F /* FirstView.swift */,
+				4B7CC13F264350D00074061F /* LoginView.swift */,
+				4B1C615326444B8A00F8FF55 /* ChatView.swift */,
 			);
 			path = ChatUIS;
 			sourceTree = "<group>";
@@ -69,6 +134,64 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		4B96350526260EC80082A847 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4BA2850E262FAF34007F6B5F /* MsgModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4BA28511262FB57B007F6B5F /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4BA28512262FB5C8007F6B5F /* MsgViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4BE644A726237B4F00E6A95D /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				4BE644B026237B7700E6A95D /* Poppins-Black.ttf */,
+				4BE644B126237B7700E6A95D /* Poppins-BlackItalic.ttf */,
+				4BE644B326237B7700E6A95D /* Poppins-Bold.ttf */,
+				4BE644AD26237B7600E6A95D /* Poppins-BoldItalic.ttf */,
+				4BE644AB26237B7600E6A95D /* Poppins-ExtraBold.ttf */,
+				4BE644AF26237B7700E6A95D /* Poppins-ExtraBoldItalic.ttf */,
+				4BE644B226237B7700E6A95D /* Poppins-ExtraLight.ttf */,
+				4BE644B726237B7800E6A95D /* Poppins-ExtraLightItalic.ttf */,
+				4BE644A926237B7600E6A95D /* Poppins-Italic.ttf */,
+				4BE644A826237B7600E6A95D /* Poppins-Light.ttf */,
+				4BE644B626237B7800E6A95D /* Poppins-LightItalic.ttf */,
+				4BE644AE26237B7700E6A95D /* Poppins-Medium.ttf */,
+				4BE644B526237B7800E6A95D /* Poppins-MediumItalic.ttf */,
+				4BE644B926237B7800E6A95D /* Poppins-Regular.ttf */,
+				4BE644B426237B7800E6A95D /* Poppins-SemiBold.ttf */,
+				4BE644AA26237B7600E6A95D /* Poppins-SemiBoldItalic.ttf */,
+				4BE644AC26237B7600E6A95D /* Poppins-Thin.ttf */,
+				4BE644B826237B7800E6A95D /* Poppins-ThinItalic.ttf */,
+			);
+			path = fonts;
+			sourceTree = "<group>";
+		};
+		A2E5A796B689C749B865F689 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				57BEE76C7A73A46EAF305535 /* Pods_ChatUIS.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DD72C2E317220ED0A1E03F31 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F567EB8FFFBD2F254F9AC373 /* Pods-ChatUIS.debug.xcconfig */,
+				C1D224B2CFABF24B1B826554 /* Pods-ChatUIS.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +199,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B3B46772623664B00F0E301 /* Build configuration list for PBXNativeTarget "ChatUIS" */;
 			buildPhases = (
+				29A0BBB902FFAB2DA6206967 /* [CP] Check Pods Manifest.lock */,
 				4B3B46642623664700F0E301 /* Sources */,
 				4B3B46652623664700F0E301 /* Frameworks */,
 				4B3B46662623664700F0E301 /* Resources */,
+				642270199CB7258F42ECD4C3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,19 +251,86 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BE644C826237B7800E6A95D /* Poppins-LightItalic.ttf in Resources */,
+				4BE644C626237B7800E6A95D /* Poppins-SemiBold.ttf in Resources */,
+				4BE644C726237B7800E6A95D /* Poppins-MediumItalic.ttf in Resources */,
+				4BE644BC26237B7800E6A95D /* Poppins-SemiBoldItalic.ttf in Resources */,
+				4BE644BE26237B7800E6A95D /* Poppins-Thin.ttf in Resources */,
 				4B3B46732623664B00F0E301 /* Preview Assets.xcassets in Resources */,
+				4BE644BA26237B7800E6A95D /* Poppins-Light.ttf in Resources */,
+				4BE644C326237B7800E6A95D /* Poppins-BlackItalic.ttf in Resources */,
+				4BE644C126237B7800E6A95D /* Poppins-ExtraBoldItalic.ttf in Resources */,
+				4BE644BB26237B7800E6A95D /* Poppins-Italic.ttf in Resources */,
+				4BE644BD26237B7800E6A95D /* Poppins-ExtraBold.ttf in Resources */,
+				4BE644C026237B7800E6A95D /* Poppins-Medium.ttf in Resources */,
+				4BE644C926237B7800E6A95D /* Poppins-ExtraLightItalic.ttf in Resources */,
+				4BE644C526237B7800E6A95D /* Poppins-Bold.ttf in Resources */,
+				4BE644C226237B7800E6A95D /* Poppins-Black.ttf in Resources */,
 				4B3B46702623664B00F0E301 /* Assets.xcassets in Resources */,
+				4BE644BF26237B7800E6A95D /* Poppins-BoldItalic.ttf in Resources */,
+				4BE644CA26237B7800E6A95D /* Poppins-ThinItalic.ttf in Resources */,
+				4BE644C426237B7800E6A95D /* Poppins-ExtraLight.ttf in Resources */,
+				4BE644CB26237B7800E6A95D /* Poppins-Regular.ttf in Resources */,
+				4B95669A2628C0B400D3A551 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		29A0BBB902FFAB2DA6206967 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ChatUIS-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		642270199CB7258F42ECD4C3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatUIS/Pods-ChatUIS-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ChatUIS/Pods-ChatUIS-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ChatUIS/Pods-ChatUIS-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		4B3B46642623664700F0E301 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4BA28513262FB5C8007F6B5F /* MsgViewModel.swift in Sources */,
+				4B7CC140264350D00074061F /* LoginView.swift in Sources */,
+				4B7CC13D26434F1C0074061F /* FirstView.swift in Sources */,
+				4BA2850F262FAF34007F6B5F /* MsgModel.swift in Sources */,
+				4B1C615426444B8A00F8FF55 /* ChatView.swift in Sources */,
 				4B3B466E2623664700F0E301 /* ContentView.swift in Sources */,
+				4B48BAA6262FC2E900E01326 /* ChatRow.swift in Sources */,
 				4B3B466C2623664700F0E301 /* ChatUISApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -264,6 +456,7 @@
 		};
 		4B3B46782623664B00F0E301 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F567EB8FFFBD2F254F9AC373 /* Pods-ChatUIS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,6 +479,7 @@
 		};
 		4B3B46792623664B00F0E301 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1D224B2CFABF24B1B826554 /* Pods-ChatUIS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
