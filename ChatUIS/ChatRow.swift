@@ -11,39 +11,40 @@ struct ChatRow: View {
     var chatData: MsgModel
     @AppStorage("current_user") var user = ""
     var body: some View {
-        HStack(spacing: 15 ){
+        HStack(spacing: 7 ){
             if chatData.user != user{
                 NickName(name: chatData.user)
             }
             if chatData.user == user{Spacer(minLength: 0)}
             VStack(alignment: chatData.user == user ? .trailing : .leading, spacing: 5, content: {
                 Text(chatData.msg)
-                    .fontWeight(.semibold)
-                    .foregroundColor(.white)
-                    .padding()
-                    .clipShape(ChatBubble(myMsg: chatData.user == user))
+                    
+                    .foregroundColor(Color.init("negroblanco"))
+                    .padding(10)
+                    .background(Color.init("verde"))
+                    .clipShape(ChatBubble(myMsg: chatData.user == user)).foregroundColor(.blue)
                 Text(chatData.timeStamp,style: .time)
                     .font(.caption2)
                     .foregroundColor(.gray)
-                    .padding(chatData.user != user ? .leading : .trailing, 19)
+                    .padding(chatData.user != user ? .leading : .trailing, 10)
             })
             if chatData.user == user{
                 NickName(name: chatData.user)
             }
             if chatData.user != user{Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)}
-        }.padding(.horizontal)
+        }.padding(.horizontal, 10).padding(.vertical, 5)
         .id(chatData.id)
     }
 }
 
 struct NickName: View {
     var name: String
-    var user = "Daniel"
+    @AppStorage("current_user") var user = ""
     var body: some View{
         Text(String(name.first!))
             .fontWeight(.heavy)
             .foregroundColor(.white)
-            .frame(width: 50, height: 50)
+            .frame(width: 40, height: 40)
             .background((name == user ? Color("verde") : Color.red).opacity(0.5))
             .clipShape(Circle())
             .contentShape(Circle())
@@ -62,3 +63,9 @@ struct ChatBubble: Shape {
 }
 
 
+struct ChatRow_Preview: PreviewProvider{
+    
+    static var previews: some View{
+        ChatRow(chatData: MsgModel(id: "id", msg: "Superrrrrr", user: "Daniel", timeStamp: Date()), user: "Daniel")
+    }
+}
