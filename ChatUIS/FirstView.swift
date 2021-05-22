@@ -10,8 +10,8 @@ import Firebase
 
 struct FirstView: View {
     
-    @State var email = ""
-    @State var password = ""
+    @State var email = "1@2.com"
+    @State var password = "123456"
     @State var alert = false
     @State var isNavigationBarHidden: Bool = true
     @State var mensaje = ""
