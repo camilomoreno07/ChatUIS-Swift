@@ -9,7 +9,7 @@ import SwiftUI
 import Firebase
 
 struct ChatView: View {
-    @State var mensaje = ""
+    
     @ObservedObject private var viewModel = MsgViewModel()
     @State var scrolled = false
     @State var msj = ""
@@ -43,12 +43,12 @@ struct ChatView: View {
                     
                 }
                 
-                VStack{
+                VStack(spacing: 0){
                     ScrollViewReader{reader in
                         ScrollView{
                             
                                 ForEach(viewModel.msgModel) { msgmodel in
-                                    ChatRow(chatData: msgmodel).onAppear{
+                                    ChatRow(chatData: msgmodel,user: Auth.auth().currentUser!.email ).onAppear{
                                         if msgmodel.id == self.viewModel.msgModel.last!.id && scrolled{
                                             reader.scrollTo(viewModel.msgModel.last!.id, anchor: .bottom)
                                         }
@@ -72,14 +72,14 @@ struct ChatView: View {
                     ZStack{
                         Color("verde").frame( height: 50, alignment: .bottom)
                         HStack{
-                            TextField("", text: $msj)
+                            TextField("", text: $viewModel.txt)
                                 .frame(height: 35)
-                                .font(.system(size: 18))
+                                .font(.system(size: 15))
                                 .padding(.horizontal, 5)
                                 .background(RoundedRectangle(cornerRadius: 50).foregroundColor(Color.init("blanconegro")))
-                            if msj != ""{
+                            if viewModel.txt != ""{
                                 Button(action: {
-                                    print("enviar")
+                                    self.viewModel.writeMsgs()
                                 }, label: {
                                     Image(systemName: "paperplane.fill").resizable().frame(width: 20, height: 20, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/).foregroundColor(.white).padding(10).background(Color.init("cuenta")).clipShape(Circle())
                                 })

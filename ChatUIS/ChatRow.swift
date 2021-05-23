@@ -6,10 +6,11 @@
 //
 
 import SwiftUI
+import Firebase
 
 struct ChatRow: View {
     var chatData: MsgModel
-    @AppStorage("current_user") var user = ""
+    var user = Auth.auth().currentUser!.email
     var body: some View {
         HStack(spacing: 7 ){
             if chatData.user != user{
@@ -29,7 +30,7 @@ struct ChatRow: View {
                     .padding(chatData.user != user ? .leading : .trailing, 10)
             })
             if chatData.user == user{
-                NickName(name: chatData.user)
+                
             }
             if chatData.user != user{Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)}
         }.padding(.horizontal, 10).padding(.vertical, 5)
@@ -39,7 +40,7 @@ struct ChatRow: View {
 
 struct NickName: View {
     var name: String
-    @AppStorage("current_user") var user = ""
+    var user = Auth.auth().currentUser!.email
     var body: some View{
         Text(String(name.first!))
             .fontWeight(.heavy)

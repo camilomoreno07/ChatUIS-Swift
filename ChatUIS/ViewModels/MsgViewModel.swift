@@ -19,7 +19,7 @@ class MsgViewModel: ObservableObject {
                 print("No documents")
                 return
             }
-                self.msgModel = documents.map { (queryDocumentSnapshot) -> MsgModel in
+            self.msgModel = documents.map { (queryDocumentSnapshot) -> MsgModel in
                 let data = queryDocumentSnapshot.data()
                 let mensaje = data["mensaje"] as? String ?? ""
                 let usuario = data["usuario"] as? String ?? ""
@@ -30,8 +30,20 @@ class MsgViewModel: ObservableObject {
             }
         }
     }
-     
+    
     func writeMsgs(){
-  
+        if let messageBody = Optional(txt) , let messageSender = Auth.auth().currentUser?.email{
+            txt = ""
+            db.collection("mensajes").addDocument(data: [
+                                                    "usuario" : messageSender,
+                                                    "mensaje" : messageBody]) { (error) in
+                if let e = error{
+                    print("There was an issue saving data to firestore, \(e)")
+                }else{
+                    
+                    print("Succesfully saved data.")
+                }
+            }
+        }
     }
 }
