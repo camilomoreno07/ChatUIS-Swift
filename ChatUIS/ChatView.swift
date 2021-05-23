@@ -89,11 +89,12 @@ struct ChatView: View {
                         
                         
                     }
-                }.keyboardManagment()
+                }
                
                 
                 
-            }.edgesIgnoringSafeArea(.all)
+            }.keyboardManagment()
+            .edgesIgnoringSafeArea(.all)
             
         }
         else{
