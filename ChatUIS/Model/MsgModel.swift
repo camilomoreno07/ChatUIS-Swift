@@ -1,7 +1,7 @@
 
 import SwiftUI
 
-struct MsgModel: Identifiable {
+struct MsgModel: Identifiable, Equatable {
     var id: String = UUID().uuidString
     var msg: String
     var user: String

@@ -6,11 +6,11 @@
 //
 
 import Foundation
-import FirebaseFirestore
+import Firebase
 
 class MsgViewModel: ObservableObject {
     @Published var msgModel = [MsgModel]()
-    
+    @Published var txt = ""
     private var db = Firestore.firestore()
     
     func fetchData(){
@@ -30,6 +30,8 @@ class MsgViewModel: ObservableObject {
             }
         }
     }
-    
-    
+     
+    func writeMsgs(){
+  
+    }
 }

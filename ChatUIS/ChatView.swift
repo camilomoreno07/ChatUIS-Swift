@@ -15,6 +15,7 @@ struct ChatView: View {
     @State var msj = ""
     @State var pageNumber = 0
     
+    
     var body: some View {
         
         if pageNumber == 0 {
@@ -43,23 +44,36 @@ struct ChatView: View {
                 }
                 
                 VStack{
-                    ScrollView{
-                        LazyVStack {
-                            ForEach(viewModel.msgModel) { msgmodel in
-                                ChatRow(chatData: msgmodel)
-                            }
+                    ScrollViewReader{reader in
+                        ScrollView{
+                            
+                                ForEach(viewModel.msgModel) { msgmodel in
+                                    ChatRow(chatData: msgmodel).onAppear{
+                                        if msgmodel.id == self.viewModel.msgModel.last!.id && scrolled{
+                                            reader.scrollTo(viewModel.msgModel.last!.id, anchor: .bottom)
+                                        }
+                                    }
+                                        
+                                }
+                                .onChange(of: viewModel.msgModel, perform: { value in
+                                    reader.scrollTo(viewModel.msgModel.last!.id, anchor: .bottom)
+                                })
+                            
                         }
+                        .onTapGesture {
+                            self.endEditing()
+                        }
+                        .onAppear(){
+                            self.viewModel.fetchData()
+                        }
+                        
                     }
-                    .onTapGesture {
-                        self.endEditing()
-                    }
-                    .onAppear(){
-                        self.viewModel.fetchData()
-                    }
+                    
                     ZStack{
                         Color("verde").frame( height: 50, alignment: .bottom)
                         HStack{
                             TextField("", text: $msj)
+                                .frame(height: 35)
                                 .font(.system(size: 18))
                                 .padding(.horizontal, 5)
                                 .background(RoundedRectangle(cornerRadius: 50).foregroundColor(Color.init("blanconegro")))

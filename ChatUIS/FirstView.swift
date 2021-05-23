@@ -215,12 +215,12 @@ struct KeyboardManagment: ViewModifier {
                 .onAppear {
                     NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillShowNotification, object: nil, queue: .main) { (notification) in
                         guard let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect else { return }
-                        withAnimation(Animation.easeOut(duration: 0.1)) {
+                        withAnimation(Animation.easeOut(duration: 0.25)) {
                             offset = keyboardFrame.height - geo.safeAreaInsets.bottom
                         }
                     }
                     NotificationCenter.default.addObserver(forName: UIResponder.keyboardWillHideNotification, object: nil, queue: .main) { (notification) in
-                        withAnimation(Animation.easeOut(duration: 0)) {
+                        withAnimation(Animation.easeOut(duration: 0.1)) {
                             offset = 0
                         }
                     }
