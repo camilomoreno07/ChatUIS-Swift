@@ -14,7 +14,7 @@ class MsgViewModel: ObservableObject {
     private var db = Firestore.firestore()
     
     func fetchData(){
-        db.collection("mensajes").addSnapshotListener { (querySnapshot, error) in
+        db.collection("mensajes").order(by: "hora").addSnapshotListener { (querySnapshot, error) in
             guard let documents = querySnapshot?.documents else{
                 print("No documents")
                 return
@@ -23,7 +23,7 @@ class MsgViewModel: ObservableObject {
                 let data = queryDocumentSnapshot.data()
                 let mensaje = data["mensaje"] as? String ?? ""
                 let usuario = data["usuario"] as? String ?? ""
-                let timeStamp = data["hora"]  as? Date ?? Date()
+                let timeStamp = data["hora"]  as? Double ?? Date().timeIntervalSince1970
                 
                 return MsgModel(msg: mensaje, user: usuario, timeStamp: timeStamp)
                 
@@ -36,7 +36,8 @@ class MsgViewModel: ObservableObject {
             txt = ""
             db.collection("mensajes").addDocument(data: [
                                                     "usuario" : messageSender,
-                                                    "mensaje" : messageBody]) { (error) in
+                                                    "mensaje" : messageBody,
+                                                    "hora" : Date().timeIntervalSince1970]) { (error) in
                 if let e = error{
                     print("There was an issue saving data to firestore, \(e)")
                 }else{

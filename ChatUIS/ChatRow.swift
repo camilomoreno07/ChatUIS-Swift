@@ -24,16 +24,16 @@ struct ChatRow: View {
                     .padding(10)
                     .background(Color.init("verde"))
                     .clipShape(ChatBubble(myMsg: chatData.user == user)).foregroundColor(.blue)
-                Text(chatData.timeStamp,style: .time)
-                    .font(.caption2)
-                    .foregroundColor(.gray)
-                    .padding(chatData.user != user ? .leading : .trailing, 10)
+//                Text(chatData.timeStamp)
+//                    .font(.caption2)
+//                    .foregroundColor(.gray)
+//                    .padding(chatData.user != user ? .leading : .trailing, 10)
             })
             if chatData.user == user{
                 
             }
             if chatData.user != user{Spacer(minLength: /*@START_MENU_TOKEN@*/0/*@END_MENU_TOKEN@*/)}
-        }.padding(.horizontal, 10).padding(.vertical, 5)
+        }.padding(.horizontal, 10).padding(.vertical, 3)
         .id(chatData.id)
     }
 }
@@ -63,10 +63,10 @@ struct ChatBubble: Shape {
     }
 }
 
-
-struct ChatRow_Preview: PreviewProvider{
-    
-    static var previews: some View{
-        ChatRow(chatData: MsgModel(id: "id", msg: "Superrrrrr", user: "Daniel", timeStamp: Date()), user: "Daniel")
-    }
-}
+//
+//struct ChatRow_Preview: PreviewProvider{
+//
+//    static var previews: some View{
+////        ChatRow(chatData: MsgModel(id: "id", msg: "Superrrrrr", user: "Daniel", timeStamp: Date()), user: "Daniel")
+//    }
+//}
